@@ -1,0 +1,63 @@
+version: 2
+
+sources:
+  - name: finance
+    description: "Dados brutos do sistema  da empresa"
+    schema: dados_financeiros
+
+    tables:
+      - name: Transacoes_financeiras
+        description: "Tabela de transações financeiras"
+        columns:
+          - name: transacao_id
+            description: Identificador único da transação.
+
+          - name: data
+            description: Data em que a transação foi realizada.
+
+          - name: valor
+            description: Valor monetário da transação.
+
+          - name: tipo
+            description: (entrada ou saída).
+
+          - name: descricao
+            description: Descrição breve da transação.
+
+          - name: conta_id
+            description: Identificador da conta relacionada à transação.
+
+      - name: categorias_financeiras
+        description: "Tabela de categorias para classificar transações"
+        columns:
+          - name: categoria_id
+            description: Identificador único da categoria.
+
+          - name: nome
+            description: Nome da categoria financeira.
+
+          - name: tipo
+            description: Tipo da categoria (entrada ou saída).
+
+      - name: contas
+        description: "Tabela de contas bancárias ou financeiras"
+        columns:
+          - name: conta_id
+            description: Identificador único da conta.
+
+          - name: nome_conta
+            description: Nome descritivo da conta.
+
+          - name: banco
+            description: Nome do banco associado à conta.
+
+          - name: titular
+            description: Nome do titular da conta.
+
+          - name: data_criacao
+            description: Data de criação da conta.
+        
+
+
+
+
